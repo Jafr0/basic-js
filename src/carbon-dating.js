@@ -17,11 +17,24 @@ const HALF_LIFE_PERIOD = 5730;
  * dateSample('WOOT!') => false
  *
  */
-function dateSample(/* sampleActivity */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+function dateSample(sampleActivity) {
+	let a = sampleActivity / 1
+	if (typeof sampleActivity === 'string' && typeof a === 'number' && a != NaN && a != undefined && a != 0) {
+
+
+
+
+		let t = Math.log(15 / a.toString()) / (0.693 / 5730)
+		if (t >= 0) return Math.ceil(t)
+		else return false
+
+
+
+	} else return false
 }
 
+
+
 module.exports = {
-  dateSample
+	dateSample
 };
